@@ -41,11 +41,14 @@ export class WritersService {
     });  
   }
 
-  getNameWriter(pId: number): Writer{
+  getNameWriter(pId: number): string{ 
+    var auxE: string;   
     const writer = WRITERS.find((element)=>{
-      element.id === pId;
+      if(element.id === pId){
+        auxE = element.nombre;
+      }
     });
-    return writer;
+    return auxE;
   }
 
 

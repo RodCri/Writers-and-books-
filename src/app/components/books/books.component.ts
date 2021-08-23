@@ -21,7 +21,10 @@ export class BooksComponent implements OnInit {
     .then(books=>{
       this.arrBooks = books;
     });
+  }
 
+  getNameWrite(bookId): string{
+    return this.writerService.getNameWriter(bookId);
   }
 
 }

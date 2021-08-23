@@ -1,3 +1,4 @@
-<div class="books" *ngFor="let book of arrBooks">
-    {{book.titulo}}
+<div class="books" *ngFor="let book of arrBooks" >
+    <p>{{book.titulo}} -- {{ getNameWrite(book.escritor)}} </p>
+    <!-- <button (click)="getNameWrite(book.escritor)">Name</button> -->
 </div>
