@@ -1,0 +1,49 @@
+.writers{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.writers__card{
+    width: 350px;
+    height: 180px;
+    padding: 1em;
+    margin: .5em;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    border-radius: 1em;
+    overflow: hidden;
+}
+.writers__card:hover{
+    cursor: pointer;
+    background-color: rgb(0,46,91);
+    color: aliceblue;
+}
+.writers__card-photo{
+    width: 60%;
+}
+.writers__card-photo img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.writers__card-info{
+    width: 40%;
+}
+.writers__filter{
+    margin: 2em 0;
+    display: flex;
+    flex-direction: row;
+}
+.writers__filter p{
+    width: 20%;
+    text-transform: uppercase;
+    font-size: 2em;
+}
+.writers__filter select{
+    width: 60%;
+}
+select{
+    text-transform: uppercase;
+}
