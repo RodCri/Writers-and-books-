@@ -1,0 +1,26 @@
+.contenedor{
+    background-color: ghostwhite;
+}
+.notfound{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.notfound img{
+    margin: 2em 0;
+}
+h2{
+    font-size: 4em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+p{
+    color: darkslategrey;
+}
+a{
+    color: black;
+    text-decoration: underline;
+    font-weight: bold;
+}

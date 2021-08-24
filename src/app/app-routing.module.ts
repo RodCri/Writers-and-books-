@@ -6,10 +6,11 @@ import { DetailWriterComponent } from './components/writers/detail-writer/detail
 import { WritersComponent } from './components/writers/writers.component';
 
 const routes: Routes = [
-  {path: 'writers', component: WritersComponent},
-  {path: 'writers/:wID', component:DetailWriterComponent},
-  {path: 'books', component: BooksComponent},
-  {path: '**', pathMatch: 'full', component: NotpageComponent}
+  { path: '', pathMatch:'full' ,redirectTo: 'writers'},
+  { path: 'writers', component: WritersComponent},
+  { path: 'writers/:wID', component:DetailWriterComponent},
+  { path: 'books', component: BooksComponent},
+  { path: '**', pathMatch: 'full', component: NotpageComponent}
 ];
 
 @NgModule({

@@ -51,6 +51,15 @@ export class WritersService {
     return auxE;
   }
 
+  getByID(pId: number): Promise<Writer>{
+    return new Promise((resolve, reject)=>{
+      const escritorFound = WRITERS.find(writer =>{
+        return writer.id === pId
+      });
+      resolve(escritorFound);
+    });
+  }
+
 
 
 }

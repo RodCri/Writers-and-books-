@@ -1,1 +1,10 @@
-<p>detail-writer works!</p>
+<div class="writers">
+    <div class="writers__card-photo">
+        <img [src]="writer?.imagen" alt="">
+    </div>
+    <div class="writers__card-info">
+        <h2>{{writer?.nombre}}</h2>
+        <h3>{{writer?.apellidos}}</h3>
+        <span>{{writer?.pais}}</span>
+    </div>
+</div>

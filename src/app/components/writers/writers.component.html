@@ -6,7 +6,7 @@
     </select>
 </div>
 <div class="writers">    
-    <div class="writers__card" *ngFor="let wri of arrWriters">
+    <div class="writers__card" *ngFor="let wri of arrWriters" [routerLink]="['/writers',wri.id]">
         <div class="writers__card-photo">
             <img [src]="wri.imagen" alt="">
         </div>
