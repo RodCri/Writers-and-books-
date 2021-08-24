@@ -8,3 +8,10 @@
         <span>{{writer?.pais}}</span>
     </div>
 </div>
+<div class="books">
+    <div class="book" *ngFor="let book of arrBooks">
+        <img [src]="book.imagen" alt="">
+        <p>{{book.titulo}}</p>
+        <p>{{book.publicado}}</p>
+    </div>
+</div>

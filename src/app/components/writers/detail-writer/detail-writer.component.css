@@ -3,6 +3,7 @@
     height: 250px;
     display: flex;
     flex-direction: row;
+    margin: auto;
     background-color: rgb(0,46,91);;
     border: 1px solid black;
     color: blanchedalmond;
@@ -28,4 +29,30 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.books{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.book{
+    width: 250px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: .5em;
+    border-radius: 1em;
+    border:  1px solid black;
+}
+.book img{
+    width: 180px;
+    height: 180px;
+    margin-bottom: 1em;
+}
+img {
+    background-image: url("http://static.forosdelweb.com/images/misc/cross.png");
 }

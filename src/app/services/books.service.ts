@@ -6,12 +6,26 @@ import { Book } from '../model/book.model';
   providedIn: 'root'
 })
 export class BooksService {
+  books: Book[];
 
-  constructor() { }
+  constructor() {
+    this.books = [];
+   }
 
   getAllBooks():Promise<Book[]>{
     return new Promise((resolve, rejects)=>{
       resolve(BOOKS);
+    });
+  }
+
+  getBooksWriter(pId: number): Promise<Book[]>{ 
+    return new Promise((resolve, reject)=>{
+      const writer = BOOKS.find((element)=>{
+        if(element.escritor == pId){
+          this.books.push(element);
+        }
+      });
+      resolve(this.books);
     });
   }
 }

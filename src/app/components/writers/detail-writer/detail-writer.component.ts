@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { WritersService } from '../../../services/writers.service';
 import { Writer } from '../../../model/writer.model';
+import { BooksService } from '../../../services/books.service';
+import { Book } from '../../../model/book.model';
 
 @Component({
   selector: 'app-detail-writer',
@@ -11,17 +13,25 @@ import { Writer } from '../../../model/writer.model';
 export class DetailWriterComponent implements OnInit {
 
   writer: Writer;
+  arrBooks: Book[];
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private writerService: WritersService) { }
+    private writerService: WritersService,
+    private bookService: BooksService) { 
+      this.arrBooks = [];
+    }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(async params =>{
-      console.log(params.wID);
+      //console.log(params.wID);
       this.writer = await this.writerService.getByID(parseInt(params.wID));
-      console.log(this.writer);
+      this.bookService.getBooksWriter(params.wID)
+      .then(books =>{
+        this.arrBooks = books;
+      });
     })
+    
   }
 
 }
