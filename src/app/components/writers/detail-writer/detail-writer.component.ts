@@ -24,13 +24,11 @@ export class DetailWriterComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(async params =>{
-      //console.log(params.wID);
       this.writer = await this.writerService.getByID(parseInt(params.wID));
-      this.bookService.getBooksWriter(params.wID)
-      .then(books =>{
-        this.arrBooks = books;
-      });
     })
+    this.activatedRoute.params.subscribe(async params =>{
+      this.arrBooks = await this.bookService.getBooksWriter(parseInt(params.wID));
+    });
     
   }
 

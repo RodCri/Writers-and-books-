@@ -18,14 +18,15 @@ export class BooksService {
     });
   }
 
-  getBooksWriter(pId: number): Promise<Book[]>{ 
+  getBooksWriter(pId): Promise<Book[]>{ 
     return new Promise((resolve, reject)=>{
-      const writer = BOOKS.find((element)=>{
-        if(element.escritor == pId){
-          this.books.push(element);
-        }
+      const arrFiltrado = BOOKS.filter(libro => {
+        // if(element.escritor == pId){
+        //   this.books.push(element);
+        // }
+        return libro.escritor === pId;
       });
-      resolve(this.books);
+      resolve(arrFiltrado);
     });
   }
 }
